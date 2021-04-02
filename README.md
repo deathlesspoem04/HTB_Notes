@@ -4,9 +4,9 @@
 
 #### HTTP (HyperText Transfer Protocol)
 
--> Consists of a client and a server 
--> Request -> Server -> Return Resource -> Client
--> Default Port for HTTP : 80
+&#8594; Consists of a client and a server 
+&#8594; Request &#8594; Server &#8594; Return Resource &#8594; Client
+&#8594; Default Port for HTTP : 80
 
 ![url_structure](https://academy.hackthebox.eu/storage/modules/35/url_structure.png)
 
@@ -42,7 +42,7 @@ This is processed by browsers on the client-side to locate sections within the p
 ![HTTP_Flow](https://academy.hackthebox.eu/storage/modules/35/HTTP_Flow.png)
 
 
-User -> URL in Browser -> DNS Server (Domain : IP) -> Browser -> (GET Request) IP : WebServer : Port -> Response to Browser (Output)
+User &#8594; URL in Browser &#8594; DNS Server (Domain : IP) &#8594; Browser &#8594; (GET Request) IP : WebServer : Port &#8594; Response to Browser (Output)
 
 
 #### HTTPS (HyperText Transfer Protocol Secure)
@@ -55,15 +55,15 @@ These drawbacks gave rise to the HTTPS (HTTP Secure) protocol. When this protoco
 
 Websites that enforce HTTPS can be identified through `https://` in the URL.
 
--> Default Port: 433
+&#8594; Default Port: 433
 
 ![HTTPS_Flow](https://academy.hackthebox.eu/storage/modules/35/HTTPS_Flow.png)
 
-URL -> HTTP Port 80 -> *Redirect* (301 Moved Permanently Response Code) -> HTTPS Port 433 -> Client (Browser) Sends a Packet -> Server sends a packet -> Key exchange -> Client verifies and sends another key -> Encrypted Connection Established
+URL &#8594; HTTP Port 80 &#8594; *Redirect* (301 Moved Permanently Response Code) &#8594; HTTPS Port 433 &#8594; Client (Browser) Sends a Packet &#8594; Server sends a packet &#8594; Key exchange &#8594; Client verifies and sends another key &#8594; Encrypted Connection Established
 
 
 An attacker may be able to perform an HTTP downgrade attack, which downgrades HTTPS communication to HTTP
 
--> By setting up a man-in-the-middle (MITM) attack and proxying (passing) all traffic through the attacker's host without the user's knowledge. 
+&#8594; By setting up a man-in-the-middle (MITM) attack and proxying (passing) all traffic through the attacker's host without the user's knowledge. 
 
 Successful downgrade attack would result in the cleartext transfer of HTTP data, which the attacker can log and later examine or manipulate for malicious purposes.
