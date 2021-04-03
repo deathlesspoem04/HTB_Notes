@@ -96,3 +96,32 @@ HTTP Response:
 
 ![raw_response](https://academy.hackthebox.eu/storage/modules/35/raw_response.png)
 
+#### Headers
+
+&#8594; HTTP headers provide an additional way to pass information between the client and the server. 
+&#8594; There are headers specific to requests and responses as well as general headers common to both. 
+&#8594; Headers can have one or multiple values appended after the header name and separated by a colon.
+
+**General Headers**
+
+&#8594; These headers don't belong specifically to a request or a response. 
+&#8594; They are contextual and are used to describe the message rather than its contents.
+
+*Date* &#8594; Holds the date and time at which the message originated. It's preferred to convert the time to the standard UTC time zone.
+*Connection *&#8594; If the current network connection should stay alive after the request finishes. Two commonly used values for this header are `close` and `keep-alive`. The `close` value from either the client or server means that they would like to terminate the connection, while the `keep-alive` header indicates that the connection should remain open.
+
+**Entity Headers**
+
+ These headers are used to describe the content (entity) being transferred by a message. They are usually found in responses and POST or PUT requests (for example, a file upload).
+ 
+ *Content-Type* &#8594; Used to describe the type of resource being transferred. The value is automatically added by the browsers on the client-side and returned in the server response.
+*Media-Type* &#8594; Describes the data being passed. For example, the media-type for a PDF is application/pdf, while the type for a PNG image is image/png. This header can play a crucial role in making the server interpret our input. The charset field denotes the encoding standard, such as UTF-8.
+*Boundary* &#8594; Acts as a maker to separate content when there is more than one in the same message.
+*Content-Length* &#8594; Size of the entity being passed. Server uses it to read data from the message body.
+*Content-Encoding* &#8594; Data can undergo multiple transformations before being passed. For example, large amounts of data can be compressed to reduce the message size.
+
+**Request Headers**
+
+&#8594; Used in an HTTP request and do not relate to the content of the message. 
+&#8594; Headers such as Accept, Accept-*, and IF-* allow for conditional requests. 
+&#8594; Headers such as Cookie or User-Agent are sent so that the server can tailor the response. 
