@@ -67,3 +67,32 @@ An attacker may be able to perform an HTTP downgrade attack, which downgrades HT
 &#8594; By setting up a man-in-the-middle (MITM) attack and proxying (passing) all traffic through the attacker's host without the user's knowledge. 
 
 Successful downgrade attack would result in the cleartext transfer of HTTP data, which the attacker can log and later examine or manipulate for malicious purposes.
+
+#### Burp Suite
+
+&#8594; It is a tool that acts as a *proxy server* and can be used to examine and modify the HTTP requests.
+&#8594; It provides a proxy that can route traffic from the browser through the proxy and view the various requests and responses b/w the client and server.
+
+BurpSuite &#8594; FoxyProxy &#8594; Intercept (Server Responses)
+
+HTTP request, as seen from Burp:
+
+![raw_request](https://academy.hackthebox.eu/storage/modules/35/raw_request.png)
+
+**Method**
+
+The first field stands for the HTTP method or verb, which specifies the type of action to perform.
+
+**Path**
+
+The second field is the path to the resource being accessed. This field can also be suffixed with a query string.
+
+**Version**
+
+The third and final field is used to denote the HTTP version.
+
+
+HTTP Response:
+
+![raw_response](https://academy.hackthebox.eu/storage/modules/35/raw_response.png)
+
